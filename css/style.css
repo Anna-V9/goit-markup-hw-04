@@ -1,6 +1,9 @@
 /*font-family: "Roboto", sans-serif;
 font-family: "Raleway", sans-serif*/
 
+/*font-family: "Roboto", sans-serif;
+font-family: "Raleway", sans-serif*/
+
 body {
     font-family: "Roboto", sans-serif;
     color: #434455;
@@ -122,6 +125,14 @@ ul {
 .banner-solution {
     background-color: #2e2f42;
     padding: 188px 0;
+    background-image: linear-gradient(to bottom,
+            rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)),
+        url(/images/people-office\ 1-min.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
 }
 
 .effective-solution {
@@ -175,9 +186,11 @@ ul {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
-.advantage{
+
+.advantage {
     padding: 120px 0;
 }
+
 .list-advantages {
     color: #2e2f42;
     display: flex;
@@ -185,9 +198,11 @@ ul {
     gap: 24px;
 
 }
-.advantage-item{
+
+.advantage-item {
     width: calc((100% - 3* 24px) / 4);
 }
+
 .advantage-title {
     font-weight: 500;
     font-size: 20px;
@@ -258,7 +273,8 @@ ul {
     text-align: center;
     color: #434455;
 }
-.team-text{
+
+.team-text {
     padding: 32px 0;
 }
 
@@ -306,7 +322,7 @@ ul {
     letter-spacing: 0.02em;
     color: #2e2f42;
     text-transform: capitalize;
-    margin-bottom: 8px ;
+    margin-bottom: 8px;
 }
 
 .portfolio-app {

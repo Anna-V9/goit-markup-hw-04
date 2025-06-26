@@ -46,6 +46,7 @@ ul {
 
 .header {
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -100,8 +101,21 @@ ul {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
 }
-
+.nav-link.current {
+    position: relative;
+}
+.nav-link.current::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #404bbf;
+}
 .address {
     font-style: normal;
     margin-left: auto;
@@ -114,18 +128,20 @@ ul {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+    transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
 }
 
 .contacts-link:hover,
 .contacts-link:focus,
 .nav-link:hover,
-.nav-link:focus {
+.nav-link:focus,
+.nav-link.current {
     color: #404bbf;
 }
 
 .banner-solution {
     background-color: #2e2f42;
-    padding: 188px 0;
+    padding: 188px 472px 292px;
     background-image: linear-gradient(to bottom,
             rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)),
@@ -199,11 +215,20 @@ ul {
     gap: 24px;
 
 }
-
 .advantage-item {
+    
     width: calc((100% - 3* 24px) / 4);
 }
-
+.advantage-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 264px;
+    height: 112px;
+    background: #f4f4fd;
+    border: 1px solid #8e8f99;
+ border-radius: 4px;
+}
 .advantage-title {
     font-weight: 500;
     font-size: 20px;
@@ -211,6 +236,7 @@ ul {
     letter-spacing: 0.02em;
     color: #2e2f42;
     margin-bottom: 8px;
+    padding: 8px 0 8px 0;
 }
 
 .advantage-descr {
@@ -253,6 +279,7 @@ ul {
     background-color: #FFFFFF;
     flex-basis: calc((100% - 3 * 24px) / 4);
     border-radius: 0px 0px 4px 4px;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .team-people {
@@ -284,18 +311,28 @@ ul {
     justify-content: center;
     align-items: center;
     gap: 20px;
-   
-}
-.symbol-social svg {
-    width: 40px;
-    height: 40px;
-    padding: 8px;
-    background-color: #4D5AE5;
-    border-radius: 50%;
-    fill: #fff;
-    
 }
 
+.social-link{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 40px;
+height: 40px;
+background-color: #4d5ae5;
+border-radius: 50%;
+transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.symbol-social svg{
+    fill: #fff;
+    width: 16px;
+    height: 16px;
+    transition:250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-link:hover{
+    background-color:#31D0AA;
+}
 .portfolio-section {
     align-items: center;
     padding: 120px 0;
@@ -323,14 +360,19 @@ ul {
 }
 
 .portfolio-item {
+    
     width: calc((100% - 48px) / 3);
 }
-
+.portfolio-item:hover{
+box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+cursor: pointer;
+}
 .portfolio-list-container {
     border-bottom: 1px solid #e7e9fc;
     border-left: 1px solid #e7e9fc;
     border-right: 1px solid #e7e9fc;
     padding: 32px 16px;
+    
 }
 
 .portfolio-title {
@@ -350,7 +392,40 @@ ul {
     letter-spacing: 0.02em;
     color: #434455;
 }
+.portfolio-img-wrapper {
+  position: relative;
+  width: 360px;
+  overflow: hidden;
+}
+.overlay {
+  position: absolute;
+  padding: 8px;
+  background-color: #4D5AE5;
+  color: #F4F4FD;
+  font-family: sans-serif;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
 
+.overlay-text{
+font-weight: 400;
+font-size: 16px; 
+line-height: 1.5;
+letter-spacing: 0.02em;
+padding:40px 32px;
+text-align:left;
+}
+
+.portfolio-item:hover .overlay {
+  transform: translateY(0);
+}
 
 .footer {
     background-color: #2e2f42;
@@ -378,4 +453,25 @@ ul {
     letter-spacing: 0.02em;
     color: #f4f4fd;
     max-width: 264px
+}
+.footer-social{
+font-weight: 500;
+font-size: 16px; 
+line-height: 1.5;
+letter-spacing: 0.02em;
+color: #fff;
+}
+.footer-content {
+  display: flex;
+  justify-content:flex-start; 
+  gap: 40px;
+ 
+}
+
+.social-icons-main {      
+gap: 16px;        
+}
+.social-icons{
+    display: flex;
+    gap: 16px;
 }

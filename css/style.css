@@ -313,13 +313,13 @@ ul {
     padding: 32px 0;
 }
 
-.symbol-social-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-}
 
+.media-list{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+}
 .social-link {
     display: flex;
     justify-content: center;

@@ -453,26 +453,22 @@ ul {
 .footer-logo {
     margin-bottom: 16px;
     display: inline-block;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: row;
-    gap: 0px;
 }
 
 .footer-logo .logo-part {
     color: #f4f4fd;
-    ;
 }
 
 .logo-part-descr {
-    font-weight: 400;
-    font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
     max-width: 264px
 }
-
+.footer-container{
+display: flex;
+align-items: baseline;
+}
 .footer-social {
     font-weight: 500;
     font-size: 16px;
@@ -483,9 +479,7 @@ ul {
 }
 
 .footer-content {
-    display: flex;
-    justify-content: flex-start;
-    gap: 120px;
+    margin-right: 120px;
 
 }
 
@@ -494,7 +488,13 @@ ul {
     display: flex;
     gap: 16px;
 }
+.social-icons-item{
+    width: 40px;
+    height: 40px;
+}
 
-svg {
-    fill: none !important;
+.social-link {
+    width: 100%;
+    height: 100%;
+    background-color: #4D5AE5;
 }

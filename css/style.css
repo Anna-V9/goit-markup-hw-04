@@ -438,14 +438,7 @@ ul {
     align-items: flex-start;
 }
 
-.overlay-text {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    padding: 40px 32px;
-    text-align: left;
-}
+
 
 .portfolio-item:hover .overlay {
     transform: translateY(0);

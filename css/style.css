@@ -327,6 +327,7 @@ ul {
     height: 40px;
     background-color: #4d5ae5;
     border-radius: 50%;
+    fill: #F4F4FD;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -343,9 +344,7 @@ ul {
     height: 16px;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.team-social-link-svg{
-    fill: #F4F4FD;
-}
+
 .portfolio-section {
     align-items: center;
     padding: 120px 0;
@@ -485,6 +484,7 @@ align-items: baseline;
 .social-icons-item{
     width: 40px;
     height: 40px;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-link {
@@ -495,7 +495,7 @@ align-items: baseline;
     background-color: #4D5AE5;
     align-items: center;
     justify-content: center;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .footer-social-link:hover,

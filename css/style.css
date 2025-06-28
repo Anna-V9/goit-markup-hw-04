@@ -485,6 +485,7 @@ align-items: baseline;
 .social-icons-item{
     width: 40px;
     height: 40px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-link {
@@ -500,4 +501,7 @@ align-items: baseline;
 .footer-social-link:hover,
 .footer-social-link:focus{
 background-color: #31d0aa;
+}
+.footer-social-link-svg{
+    fill: #F4F4FD;
 }
